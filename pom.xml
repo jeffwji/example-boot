@@ -8,12 +8,6 @@
 	<name>weekly-report</name>
 	<url>http://maven.apache.org</url>
 
-<!-- <parent>  
-    <groupId>org.springframework.boot</groupId>  
-    <artifactId>spring-boot-starter-parent</artifactId>  
-    <version>1.2.5.RELEASE</version>  
-</parent>   -->
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.11</junit.version>
@@ -52,6 +46,11 @@
 		</snapshotRepository>
 	</distributionManagement> -->
 
+	<scm>
+		<connection>scm:git:https://github.com/jeffwji/example-boot.git</connection>
+		<developerConnection>scm:git:https://github.com/jeffwji/example-boot.git</developerConnection>
+	</scm>
+	
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -210,7 +209,7 @@
 				<filtering>true</filtering>
 				<directory>src/test/resources</directory>
 				<includes>
-					<include>*</include>
+					<include>**/*</include>
 				</includes>
 			</testResource>
 		</testResources>
@@ -218,12 +217,12 @@
 
 	<dependencies>
 		<!-- Test -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 		
 		<dependency>
 			<groupId>com.wang</groupId>
@@ -246,6 +245,12 @@
 	        <scope>provided</scope>
 	    </dependency>
 	    
+	    <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.34</version>
+		</dependency>
+		
 		<!-- htche srcurity -->
 		<dependency>
 			<groupId>com.wang</groupId>
@@ -277,8 +282,4 @@
   			<version>${database.mybatis.version}</version>
 		</dependency>
 	</dependencies>
-	<scm>
-		<connection>scm:git:https://github.com/meee55/example-boot.git</connection>
-		<developerConnection>scm:git:https://github.com/meee55/example-boot.git</developerConnection>
-	</scm>
 </project>
