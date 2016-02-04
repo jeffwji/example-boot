@@ -1,4 +1,4 @@
-package com.wang.meetup.controllers;
+package com.wang.meetup.rests;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/rest/v2")
-public class CategoryControllerV2 extends CategoryController {
+@RequestMapping("/rest/v1")
+public class CategoryController {
 	@RequestMapping(value = "/category", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	@ResponseBody
 	public List<String> catetory() {
-		return Arrays.asList("catetoryV2");
+		return Arrays.asList("catetory");
 	}
 }
