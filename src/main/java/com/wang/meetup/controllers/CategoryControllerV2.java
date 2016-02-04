@@ -16,6 +16,6 @@ public class CategoryControllerV2 extends CategoryController {
 			MediaType.APPLICATION_XML_VALUE })
 	@ResponseBody
 	public List<String> catetory() {
-		return Arrays.asList("catetory");
+		return Arrays.asList("catetoryV2");
 	}
 }

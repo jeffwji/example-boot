@@ -31,6 +31,6 @@ public class CategoryControllerIT extends ITestBase {
 				Arrays.asList(MediaType.APPLICATION_XML), List.class);
 
 		Assert.assertEquals(HttpStatus.OK, entity.getStatusCode());
-		Assert.assertTrue(entity.getBody().contains("catetory"));
+		Assert.assertTrue(entity.getBody().contains("catetoryV2"));
 	}
 }
